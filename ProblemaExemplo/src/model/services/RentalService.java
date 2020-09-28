@@ -9,7 +9,7 @@ public class RentalService {
 	private Double pricePerDay;
 	private Double pricePerHour;
 
-	private BrazilTaxService taxService;
+	private TaxService taxService;
 
 	// Standard Constructor
 	public RentalService() {
@@ -17,36 +17,13 @@ public class RentalService {
 	}
 
 	// Constructor Using Fields
-	public RentalService(Double pricePerDay, Double pricePerHour, BrazilTaxService taxService) {
+	public RentalService(Double pricePerDay, Double pricePerHour, TaxService taxService) {
+		super();
 		this.pricePerDay = pricePerDay;
 		this.pricePerHour = pricePerHour;
 		this.taxService = taxService;
 	}
 
-	// Getters and Setters
-	public Double getPricePerDay() {
-		return pricePerDay;
-	}
-
-	public void setPricePerDay(Double pricePerDay) {
-		this.pricePerDay = pricePerDay;
-	}
-
-	public Double getPricePerHour() {
-		return pricePerHour;
-	}
-
-	public void setPricePerHour(Double pricePerHour) {
-		this.pricePerHour = pricePerHour;
-	}
-
-	public BrazilTaxService getTaxService() {
-		return taxService;
-	}
-
-	public void setTaxService(BrazilTaxService taxService) {
-		this.taxService = taxService;
-	}
 
 	// Methods
 	public void processInvoice(CarRental carRental) {
